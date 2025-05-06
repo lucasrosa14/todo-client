@@ -1,12 +1,12 @@
 import { Component, computed, Input, Signal, signal, WritableSignal } from '@angular/core';
-import { IonGrid, IonCol, IonCheckbox } from "@ionic/angular/standalone";
+import { IonGrid, IonCol, IonCheckbox, IonRow } from "@ionic/angular/standalone";
 import { Todo } from 'src/app/structure/todo/domain/entity/todo';
 
 @Component({
   selector: 'app-todo-list',
   templateUrl: './todo-list.component.html',
   styleUrls: ['./todo-list.component.scss'],
-  imports: [
+  imports: [IonRow, 
     IonCheckbox,  
     IonCol, 
     IonGrid
