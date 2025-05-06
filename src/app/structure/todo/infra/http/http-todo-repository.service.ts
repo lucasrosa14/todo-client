@@ -23,10 +23,10 @@ export class HttpTodoRepositoryService implements TodoRepository {
     };
     const response: HttpResponse = await this.httpClientService.post("http://localhost:8080/todo/list", headers, JSON.stringify(body));
   
-    if (response.body.todoList) {
+    if (response.body.listTodo) {
       return {
         message: "Todos found",
-        todoList:response.body.todoList
+        todoList: response.body.listTodo
       };
     } else {
       return{
