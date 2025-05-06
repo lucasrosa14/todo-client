@@ -1,0 +1,14 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Todo List
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  @if (todoList().length >0) {
+    <app-todo-list [todoList]="todoList"></app-todo-list>
+  }
+  
+</ion-content>

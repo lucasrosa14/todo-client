@@ -1,0 +1,16 @@
+<ion-grid>
+  <ion-col>
+    <h3> Lista de tarefas pendentes </h3>
+
+    @for (todo of pendingTodoList(); track todo.id) {
+      <ion-checkbox labelPlacement="end" [checked]="todo.done"> {{ todo.name }}</ion-checkbox>
+    }
+
+  </ion-col>
+  <ion-col>
+    <h3> Lista de tarefas concluídas </h3>
+    @for (todo of doneTodoList(); track todo.id) {
+      <ion-checkbox labelPlacement="end" [checked]="todo.done"> {{ todo.name }}</ion-checkbox>
+    }
+  </ion-col>
+</ion-grid>
