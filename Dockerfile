@@ -15,10 +15,9 @@ RUN mkdir .angular && \
     chown node:node .angular && \
     chmod 777 .angular
 
-RUN npm i -g @ionic/cli && \
-    npm i -D -E -g @angular/cli && \
+RUN npm i -D -E -g @angular/cli && \
     npm i --save-dev @angular-devkit/build-angular    
-    
+
 EXPOSE 8100
 
 USER node
