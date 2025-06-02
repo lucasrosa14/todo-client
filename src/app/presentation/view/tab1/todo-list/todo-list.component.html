@@ -3,8 +3,8 @@
     <h3> Lista de tarefas pendentes </h3>
     
       @for (todo of pendingTodoList(); track todo.id) {
-        <ion-row class="ion-padding-start">
-          <ion-checkbox labelPlacement="end" [checked]="todo.done"> {{ todo.name }}</ion-checkbox>
+        <ion-row class="ion-padding-start" style="margin-bottom: 8px;">
+          <ion-checkbox labelPlacement="end" [checked]="todo.done" (ionChange)="handleCheckboxChange($event.detail, todo.id)"> {{ todo.name }}</ion-checkbox>
         </ion-row>
       }
     
@@ -13,8 +13,8 @@
     <h3> Lista de tarefas concluídas </h3>
     
       @for (todo of doneTodoList(); track todo.id) {
-        <ion-row class="ion-padding-start">
-          <ion-checkbox labelPlacement="end" [checked]="todo.done"> {{ todo.name }}</ion-checkbox>
+        <ion-row class="ion-padding-start" style="margin-bottom: 8px;">
+          <ion-checkbox labelPlacement="end" [checked]="todo.done" (ionChange)="handleCheckboxChange($event.detail, todo.id)"> {{ todo.name }}</ion-checkbox>
         </ion-row>
       }
   </ion-col>
